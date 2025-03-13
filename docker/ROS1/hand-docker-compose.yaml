@@ -1,0 +1,12 @@
+version: '3'
+services:
+  hand:
+    build:
+      context: .
+      dockerfile: hand.dockerfile
+    container_name: hand-container-ros1
+    tty: true
+    volumes:
+      - /home/piotr/ros_ws/Inspire-Robots-Hand-Teleoperation/ros1_ws:/ros_ws
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
